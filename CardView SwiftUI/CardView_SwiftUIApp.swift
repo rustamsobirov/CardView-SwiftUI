@@ -2,7 +2,7 @@
 //  CardView_SwiftUIApp.swift
 //  CardView SwiftUI
 //
-//  Created by iMac G1 on 03/03/23.
+//  Created by Sobirov on 03/03/23.
 //
 
 import SwiftUI
@@ -11,7 +11,12 @@ import SwiftUI
 struct CardView_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ScrollView{
+                ForEach(0 ..< 5){item in
+                    PersonCardView(person: users[0])
+                }
+            }
+            
         }
     }
 }
